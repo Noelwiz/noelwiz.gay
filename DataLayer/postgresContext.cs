@@ -12,9 +12,9 @@ namespace DataLayer.Context
 
         private string ConnectionString;
 
-        public postgresContext(String connectionString)
+        public postgresContext(string connectionString)
         {
-            ConnectionString = connectionString;
+            this.ConnectionString = connectionString;
         }
 
         public postgresContext(DbContextOptions<postgresContext> options)
@@ -22,6 +22,7 @@ namespace DataLayer.Context
         {
         }
 
+        #region tables
         public virtual DbSet<Blogpost> Blogposts { get; set; } = null!;
         public virtual DbSet<Character> Characters { get; set; } = null!;
         public virtual DbSet<Owner> Owners { get; set; } = null!;
@@ -29,6 +30,7 @@ namespace DataLayer.Context
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<Ship> Ships { get; set; } = null!;
         public virtual DbSet<ShipRating> ShipRatings { get; set; } = null!;
+        #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
