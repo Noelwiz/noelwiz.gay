@@ -1,0 +1,18 @@
+﻿@page
+@model noelwiz.gay.Pages.ViewPostModel
+
+@{
+    ViewData["Title"] = Model.Blogpost.Title;
+}
+
+<h1>@Model.Blogpost.Title</h1>
+
+<div>
+     <article>
+         @Html.Raw( @Model.Blogpost.Content)
+     </article>
+</div>
+<br />
+<div>
+    <a asp-page="./BlogPosts">Back to List</a>
+</div>
