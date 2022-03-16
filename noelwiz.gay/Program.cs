@@ -1,5 +1,7 @@
 //configure services
+using DataLayer;
 using DataLayer.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,15 +21,12 @@ builder.Services.Configure<ForwardedHeadersOptions>(opts =>
 });
 
 
-
 builder.Services.AddReverseProxy()
     .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
 
-//var connectionstring = builder.Configuration.GetValue<string>("connectionstrings:postgres");
 
-builder.Services.AddDbContext<postgresContext>(context =>
-       new postgresContext(builder.Configuration.GetValue<string>("connectionstrings:postgres"))
-    );
+builder.Services.AddDbContext<PostgresContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("postgres")));
 
 
 

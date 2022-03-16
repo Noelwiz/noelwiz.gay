@@ -15,9 +15,9 @@ namespace noelwiz.gay.Pages
 {
     public class BlogPostsModel : PageModel
     {
-        private readonly DataLayer.Context.postgresContext _context;
+        private readonly DataLayer.Context.PostgresContext _context;
 
-        public BlogPostsModel(postgresContext context)
+        public BlogPostsModel(PostgresContext context)
         {
             _context = context;
         }

@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using DataLayer.Models;
 using Microsoft.Extensions.Configuration;
+using DataLayer.Models;
 
 namespace DataLayer.Context
 {
-    public partial class postgresContext : DbContext
+    public partial class PostgresContext : DbContext
     {
 
         private string ConnectionString;
 
-        public postgresContext(string connectionString)
-        {
-            this.ConnectionString = connectionString;
-        }
-
-        public postgresContext(DbContextOptions<postgresContext> options)
+        public PostgresContext(DbContextOptions<PostgresContext> options)
             : base(options)
         {
+
         }
 
         #region tables
@@ -36,9 +32,9 @@ namespace DataLayer.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-
-                optionsBuilder.UseNpgsql(ConnectionString);
+                optionsBuilder.UseNpgsql();
+                throw new InvalidOperationException("Should have been configured!");
+                
             }
         }
 
