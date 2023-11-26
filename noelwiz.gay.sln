@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "noelwiz.gay", "noelwiz.gay\noelwiz.gay.csproj", "{26841A79-F0AB-4AFC-87CB-30F48BAC7240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{B4F5DB3B-44B7-400E-88F9-4E902C835565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{B4F5DB3B-44B7-400E-88F9-4E902C835565}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

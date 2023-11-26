@@ -1,12 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>5d2f2af9-e48b-4638-b8d4-003eb5d11183</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
@@ -22,9 +20,7 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
     <PackageReference Include="Yarp.ReverseProxy" Version="1.0.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
   </ItemGroup>
-
 </Project>
